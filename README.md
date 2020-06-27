@@ -1,2 +1,2 @@
-# Web-front-end-case-library
-Web-front-end-case-library
+# 华哥的web前端案例库
+这个仓库主要放置一些前端学习过程中的案例，主要服务于初级入门选手
