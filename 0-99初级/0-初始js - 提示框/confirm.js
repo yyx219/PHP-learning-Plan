@@ -1,0 +1,1 @@
+confirm('hello confirm？您确定吗？');
