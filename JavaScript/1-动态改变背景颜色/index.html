@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="green">绿色</button>
+    <button id="blue">蓝色</button>
+    <script>
+        var green = document.getElementById('green');
+        green.onclick=function(){
+            document.body.style.background = "green"
+            green.style.color="red"
+        }
+        var blue = document.getElementById('blue');
+        blue.onclick=function(){
+            document.body.style.background = "blue"
+            blue.style.color="red"
+        }
+     </script>
+</body>
+</html>
