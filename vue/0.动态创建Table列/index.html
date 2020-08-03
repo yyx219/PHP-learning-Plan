@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        td,
+        th {
+            border: 1px silver #000;
+            text-align: center;
+            width: 100px;
+            color: #fff;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="item">
+        <button @click="add">增加列</button>
+        <table>
+            <thead>
+                <tr>
+                    <th v-for="(itemTitle,key) in list[0]">{{key}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item,index) in list">
+                    <td v-for="title in item">{{title}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                item: '',
+                list: [{
+                        name: "胡颖(组长)",
+                        group: "一组"
+                    },
+                    {
+                        name: "何润宏",
+                        group: "一组"
+                    },
+                    {
+                        name: "李志豪",
+                        group: "一组"
+                    },
+                    {
+                        name: "候华雨",
+                        group: "一组"
+                    }
+                ]
+            },
+            methods: {
+                add() {
+                    var n = 0;
+                    this.list.forEach(value => {
+                        n++;
+                        this.$set(value, this.item, n)
+                    });
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
